@@ -12,6 +12,7 @@ public class Qes1_3 {
 //		st＝ログインユーザー名
 		Scanner st1 = new Scanner(System.in);
 		System.out.print("ユーザー名 > ");
+//		入力された文字を取得する
 		String st = st1.next();
 		System.out.println(st);;
 //		入力された文字数を確認する
@@ -85,7 +86,7 @@ public class Qes1_3 {
 					String myT;
 					String enemy;
 //				myをnameの手とする
-				for(int i =0;;i++) {
+				for(int ii =0;;ii++) {
 //		      相手の手
 					int cpu = Integer.valueOf(new Random().nextInt(3));
 //					nameの手
@@ -126,7 +127,7 @@ public class Qes1_3 {
 					if((my==0 && cpu==1)||(my==1 && cpu==2)||(my==2 && cpu==2)) {
 						System.out.println("やるやん。");
 						System.out.println("次は俺にリベンジさせて");
-						System.out.println("勝つまでにかかった合計回数は"+ i + "回です");
+						System.out.println("勝つまでにかかった合計回数は"+ ii + "回です");
 						break;
 					}else {
 //						nameがグーで負けた場合
@@ -161,80 +162,7 @@ public class Qes1_3 {
 		
 
 		
-			System.out.println("課題4");
-//			左側を基準に、右側の数字を01～09までループし、終わったら左側の数字を01進める条件式
-			for(int n=1;n<=9;n++) {
-				for(int m=1;m<=9;m++) {
-//					計算式を出力し、フォーマットを0を埋め込む形式にする
-					System.out.println(String.format("%02d",n)+"*"+String.format("%02d",m)+"="+String.format("%02d",n*m));
-					
-				}
-				
-			}
-			System.out.println("課題5");
-//			左側を基準に、右側の数字を01～09までループし、終わったら左側の数字を01進める条件式
-			for(int m=1;m<=9;m++) {
-					for(int n=1;n<=14;n++) {
-						if(n<=9) {
-					
-//					計算式を出力し、フォーマットを0を埋め込む形式にする
-					System.out.println(String.format("%02d",n)+"*"+String.format("%02d",m)+"="+String.format("%03d",n*m));
-						}else {
-							System.out.println(String.format("%03d",n)+"*"+String.format("%02d",m)+"="+String.format("%03d",n*m));
-						}
-			}
-	}
-			System.out.println("課題6");
-//			変数を宣言し、値を設定する
-			String text = "の残りの台数は";
-			String text2 = "台です";
-//			for(){}内の処理を繰り返させる
-			for(int p = 0;;p++) {
-//				入力文字を読み取る
-				Scanner sc = new Scanner(System.in);
-				System.out.print("商品を入力 > ");
-				String next = sc.next();
-//				、を区切りと指定する。
-				sc.useDelimiter("、");
-				
-				
-				switch (next){
-				  case "パソコン":
-				    // 入力がパソコンときに実行される処理
-					  int pc = Integer.valueOf(new Random().nextInt(11));
-					  System.out.println(next+text+pc+text2);
-						break;
-				  case "冷蔵庫":
-				    // 入力が冷蔵庫のときに実行される処理
-				      int re = Integer.valueOf(new Random().nextInt(11));
-				      System.out.println(next+text+re+text2);
-				      break;
-				  case "扇風機":
-					  int ok = Integer.valueOf(new Random().nextInt(11));
-					  System.out.println(next+text+ok+text2);
-					  break;
-				  case "洗濯機":
-					  int se = Integer.valueOf(new Random().nextInt(11));
-					  System.out.println(next+text+se+text2);
-					  break;
-				  case "加湿器":
-					  int ka = Integer.valueOf(new Random().nextInt(11));
-					  System.out.println(next+text+ka+text2);
-					  break;
-				  case  "テレビ","ディスプレイ" :
-					  
-				      int tv = Integer.valueOf(new Random().nextInt(11));
-				      System.out.println(next+text+tv+text2);
-				  break;
-				  default :
-					  System.out.println("『 その他商品 』は指定の商品ではありません");
-						
-				}
-				
-				
-			
 
-			}
 	}
     
 }
