@@ -17,7 +17,9 @@ public class Qes6 {
 //			入力された文字を読み取る
 
 			System.out.println("商品を入力してください＞");
+//			入力された文字をscaに代入する
 			Scanner sca = new Scanner(System.in);
+//			入力された文字をString型に変更する
 		    String str = sca.nextLine();
 //			、を区切りと指定する。
 		    String[] st = str.split("、");
@@ -26,33 +28,39 @@ public class Qes6 {
 			switch (ne){
 			  case "パソコン":
 			    // 入力がパソコンときに実行される処理
+//				  変数にランダムに0~11の数値が入るようにする
 				  int pc = Integer.valueOf(new Random().nextInt(11));
 				  System.out.println(ne+text+pc+text2);
 					break;
 			  case "冷蔵庫":
 			    // 入力が冷蔵庫のときに実行される処理
+//				  変数にランダムに0~11の数値が入るようにする
 			      int re = Integer.valueOf(new Random().nextInt(11));
 			      System.out.println(ne+text+re+text2);
 			      break;
 			      // 入力が冷蔵庫のときに実行される処理
+//				  変数にランダムに0~11の数値が入るようにする
 			  case "扇風機":
 				  int ok = Integer.valueOf(new Random().nextInt(11));
 				  System.out.println(ne+text+ok+text2);
 				  break;
 				  // 入力が洗濯機のときに実行される処理
+//				  変数にランダムに0~11の数値が入るようにする
 			  case "洗濯機":
 				  int se = Integer.valueOf(new Random().nextInt(11));
 				  System.out.println(ne+text+se+text2);
 				  break;
 				  // 入力が加湿器のときに実行される処理
+//				  変数にランダムに0~11の数値が入るようにする
 			  case "加湿器":
 				  int ka = Integer.valueOf(new Random().nextInt(11));
 				  System.out.println(ne+text+ka+text2);
 				  break;
 				  // 入力がテレビまたはディスプレイのときに実行される処理
 			  case  "テレビ","ディスプレイ" :
-				  
+//				  変数にランダムに0~11の数値が入るようにする
 			      int tv = Integer.valueOf(new Random().nextInt(11));
+//			  　　変数にランダムに0~11の数値が入るようにする
 			      int dp = Integer.valueOf(new Random().nextInt(11));
 			      // 入力がテレビ、ディスプレイの切り分けを行う処理
 			      String result= ne =="テレビ"?ne+text+tv+text2:ne+text+dp+text2;

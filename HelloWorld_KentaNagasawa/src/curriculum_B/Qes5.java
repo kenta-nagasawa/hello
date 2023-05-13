@@ -13,6 +13,7 @@ public class Qes5 {
 //				計算式を出力し、フォーマットを0を埋め込む形式にする
 				System.out.println(String.format("%02d",ne)+"*"+String.format("%02d",ma)+"="+String.format("%03d",ne*ma));
 					}else {
+//						計算式を出力し、フォーマットを0を埋め込む形式にする
 						System.out.println(String.format("%03d",ne)+"*"+String.format("%02d",ma)+"="+String.format("%03d",ne*ma));
 					}
 		}

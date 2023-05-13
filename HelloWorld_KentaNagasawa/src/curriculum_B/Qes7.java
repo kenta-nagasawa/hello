@@ -34,18 +34,22 @@ public class Qes7 extends Qes6 {
 			String t2 ="』の点数を入力してください ：";
 //			英語の点数を小数点表記にする
 			System.out.println(n+t1+"英語"+t2);
+//			入力された文字を変数に代入する
 			Scanner en = new Scanner(System.in);
 		    double en2 = en.nextDouble();
 //		    数学の点数を小数点表記にする
 			System.out.println(n+t1+"数学"+t2);
+//			入力された文字を変数に代入する
 			Scanner ma = new Scanner(System.in);
 		    double ma2 = ma.nextDouble();
 //		    理科の点数を小数点表記にする
 			System.out.println(n+t1+"理科"+t2);
+//			入力された文字を変数に代入する;
 			Scanner sy = new Scanner(System.in);
 		    double sy2 = sy.nextDouble();
 //		    社会の点数を小数点表記にする
 			System.out.println(n+t1+"社会"+t2);
+//			入力された文字を変数に代入する
 			Scanner so= new Scanner(System.in);
 		    double so2 = so.nextDouble();
 //		    一人ずつの強化の点数を合計し、allに格納する
@@ -61,12 +65,12 @@ public class Qes7 extends Qes6 {
 //			一人の全教科の平均点を出す。
 			System.out.println(n+"人の平均点は"+String.format("%.2f", all[n-1])+"点です");
 		}
-//		教科ごとの平均点を変数で宣言する
+//		教科ごとの合計を人数で割り、平均点を出す。
 		double ema = enav/nu;
 		double maa = maav/nu;
 		double sya = syav/nu;
 		double soa = soav/nu;
-//		全教科の平均点を変数で宣言する
+//		全教科の全体を合計し、人数×教科数で割り平均点を変数で宣言する
 		double emss = (enav+maav+syav+soav)/(nu*4);
 //		それぞれの平均点をコンソールに出力する
 		System.out.println("英語の平均点は"+String.format("%.2f",ema)+"点です");

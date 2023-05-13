@@ -93,6 +93,7 @@ public class Qes1_3 {
 				    Scanner my1 = new Scanner(System.in);
 				    System.out.println("じゃんけん：0はグー、1：チョキ、2：パー");
 					System.out.print("入力してください > ");
+//					入力された手をint型に変更する
 					int my = my1.nextInt();
 					System.out.println(my);
 //					nameがグーを出したときに実行される処理
