@@ -191,13 +191,13 @@ public class Qes1_13 {
 //			dou2,dou3は8で使用した値に戻す
 			String dou4 =String.valueOf(dou2-=dou2/2);
 			String dou5 =String.valueOf(dou3-=dou3/2);
-//　　　　　変換した値を文字列として出力する
+//　        変換した値を文字列として出力する
 			System.out.println(in2 + dou4 + dou5);
 			 
 			System.out.println("");
 			System.out.println("問12");
 //		課題12
-//			 11で変換した【年齢・身長】を整数型に変換して出力
+//			11で変換した【年齢・身長】を整数型に変換して出力
 //			年齢を整数型へ変換
 		    int age = Integer.parseInt(in2);
 //		    年齢を出力
@@ -209,8 +209,8 @@ public class Qes1_13 {
 			 
 			System.out.println("");
 			System.out.println("問13");
-//			課題13
-//			 12で変換した【年齢・身長】で【年齢が25もしくは身長が160以上】であれば実行される
+//	    課題13
+//			12で変換した【年齢・身長】で【年齢が25もしくは身長が160以上】であれば実行される
 			
 			 System.out.println(age == 25 | hei >=160);
 			 
