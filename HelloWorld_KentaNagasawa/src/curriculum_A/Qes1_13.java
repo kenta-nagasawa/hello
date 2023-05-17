@@ -177,10 +177,12 @@ public class Qes1_13 {
 		// それぞれの値がint、double型のため、String型へ変換する
 		String age2 =String.valueOf(age);
 		//身長,体重を8で使用した値に戻す
-		String height2 =String.valueOf(height -= height / 2);
-		String weight2 =String.valueOf(weight -= weight / 2);
+		height = 168.5;
+		weight = 64.2;
+		String height2 =String.valueOf(height);
+		String weight2 =String.valueOf(weight);
 		// 変換した値を文字列として出力する
-		System.out.println(age2 + height2 + weight2);
+		System.out.println(age2 + "歳・" + height2 + "cm・" + weight2 + "kg");
 
 		System.out.println("\n問12");
 		// 課題12
@@ -188,11 +190,11 @@ public class Qes1_13 {
 		// 年齢を整数型へ変換
 		int age3 = Integer.parseInt(age2);
 		// 年齢を出力
-		System.out.println(age3);
+		System.out.println(age3 + "歳");
 		// String型からdouble型へ戻す
 		double height3 = Double.parseDouble(height2);
 		// 体重を整数型で出力する
-		System.out.println((int)height3);
+		System.out.println((int)height3 + "cm");
 
 		System.out.println("\n問13");
 		// 課題13
