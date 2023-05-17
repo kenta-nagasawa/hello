@@ -174,11 +174,11 @@ public class Qes1_13 {
 		System.out.println("\n問11");
 		// 課題11
 		// 8で使用した【年齢・身長・体重】を文字列型に型変換し繋げて出力してください
-		// それぞれの値がint、double型のため、String型へ変換する
-		String age2 =String.valueOf(age);
-		//身長,体重を8で使用した値に戻す
+		// 身長,体重を8で使用した値に戻す
 		height = 168.5;
 		weight = 64.2;
+		// それぞれの値がint、double型のため、String型へ変換する
+		String age2 =String.valueOf(age);
 		String height2 =String.valueOf(height);
 		String weight2 =String.valueOf(weight);
 		// 変換した値を文字列として出力する
