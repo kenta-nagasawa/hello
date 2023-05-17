@@ -86,7 +86,7 @@ public class Qes1_3 {
 					String myT = null;
 					String enemy = null;
 					// myを自分の手とする
-					for(int ii = 0;;ii ++) {
+					for(int i = 0;;i ++) {
 						// 相手の手
 						int cpu = Integer.valueOf(new Random().nextInt(3));
 						// nameの手
@@ -113,13 +113,14 @@ public class Qes1_3 {
 							}
 
 						}
+						// 相手がグーを出したときに実行される処理
 						if(cpu == 0) {
 							enemy = "「グー」";
-							// nameがチョキを出したときに実行される処理
+							// 相手がチョキを出したときに実行される処理
 						}else {
 							if(cpu == 1) {
 								enemy = "「チョキ」";
-								// nameがパーを出したときに実行される処理
+								// 相手がパーを出したときに実行される処理
 							}else{
 								if(cpu == 2) {
 								enemy = "「パー」";
@@ -132,7 +133,7 @@ public class Qes1_3 {
 						System.out.println("相手の手は" + enemy);
 						// nameが勝ったときのに実行される処理
 						if((my == 0 && cpu == 1)||(my == 1 && cpu == 2)||(my == 2 && cpu == 2)) {
-							System.out.println("やるやん。 \n次は俺にリベンジさせて \n勝つまでにかかった合計回数は"+ ii + "回です");
+							System.out.println("やるやん。 \n次は俺にリベンジさせて \n勝つまでにかかった合計回数は"+ i + "回です");
 							break;
 						}else{
 							// nameがグーで負けた場合
@@ -151,7 +152,7 @@ public class Qes1_3 {
 										// あいこの場合
 										System.out.println("DRAW あいこ もう一回しましょう！");
 										}else{
-											//自分場が「0,1,2」以外の入力だった時
+											// 自分場が「0,1,2」以外の入力だった時
 											System.out.println("もう一度入力してください");
 										}
 									}
