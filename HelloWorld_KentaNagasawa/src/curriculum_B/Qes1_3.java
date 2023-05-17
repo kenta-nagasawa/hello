@@ -9,15 +9,15 @@ public class Qes1_3 {
 
 		System.out.println("課題1");
 		// st＝ログインユーザー名
-		Scanner st1 = new Scanner(System.in);
+		Scanner sca = new Scanner(System.in);
 		System.out.print("\nユーザー名 > ");
 		// 入力された文字を取得する
-		String st = st1.next();
-		System.out.println(st);
+		String userName = sca.next();
+		System.out.println(userName);
 		// 入力された文字数を確認する
-		int num = st.length();
+		int num = userName.length();
 		// 条件式を作る
-		if(num > 10 ) {
+		if(num > 9 ) {
 			// 条件式がnum >= 10がtrueの時に実行される処理
 			System.out.println("「名前を10文字以内にしてください」");
 
@@ -27,7 +27,7 @@ public class Qes1_3 {
 				System.out.println("「名前を入力してください」");
 				// 上記の条件式に当てはまらないときに実行される処理
 			}else{
-				System.out.println("ユーザー名「"+ st +"」を登録しました");
+				System.out.println("ユーザー名「"+ userName +"」を登録しました");
 			}
 
 		}
@@ -38,13 +38,13 @@ public class Qes1_3 {
 		// st＝ログインユーザー名
 		String alpha ="^[0-9a-zA-Z]+$";
 		// 半角英数字でない場合に実行される処理
-		if(st.matches(alpha) == false) {
+		if(userName.matches(alpha) == false) {
 			System.out.println("「半角英数字のみで名前を入力してください」");
 		}else{
 			// 半角英数字の場合の時に実行される処理
-			if(st.matches(alpha) == true) {
+			if(userName.matches(alpha) == true) {
 			}
-			if(num > 10 ) {
+			if(num > 9 ) {
 				// 条件式がnum >= 10がtrueの時に実行される処理
 				System.out.println("「名前を10文字以内にしてください」");
 
@@ -54,7 +54,7 @@ public class Qes1_3 {
 					System.out.println("「名前を入力してください」");
 					// 上記の条件式に当てはまらないときに実行される処理
 				}else{
-					System.out.println("ユーザー名「"+ st +"」を登録しました");
+					System.out.println("ユーザー名「"+ userName +"」を登録しました");
 				}
 			}
 		}
@@ -64,13 +64,13 @@ public class Qes1_3 {
 		System.out.println("\n課題3");
 		// st＝ユーザー名
 		// 半角英数字でない場合に実行される処理
-		if(st.matches(alpha) == false) {
+		if(userName.matches(alpha) == false) {
 			System.out.println("「半角英数字のみで名前を入力してください」");
 		}else{
 			// 半角英数字の場合の時に実行される処理
-			if(st.matches(alpha) == true) {
+			if(userName.matches(alpha) == true) {
 			}
-			if(num > 10 ) {
+			if(num > 9 ) {
 				// 条件式がnum >= 10がtrueの時に実行される処理
 				System.out.println("「名前を10文字以内にしてください」");
 
@@ -80,7 +80,7 @@ public class Qes1_3 {
 					System.out.println("「名前を入力してください」");
 					// 上記の条件式に当てはまらないときに実行される処理
 				}else{
-					System.out.println("ユーザー名「"+ st +"」を登録しました");
+					System.out.println("ユーザー名「"+ userName +"」を登録しました");
 					// じゃんけんでnameが勝つまで実行される処理
 					//myTとenemyに初期値「null」を設定する
 					String myT = null;
@@ -90,11 +90,11 @@ public class Qes1_3 {
 						// 相手の手
 						int cpu = Integer.valueOf(new Random().nextInt(3));
 						// nameの手
-						Scanner my1 = new Scanner(System.in);
+						sca = new Scanner(System.in);
 						System.out.println("\nじゃんけん：0はグー、1：チョキ、2：パー");
 						System.out.print("入力してください > ");
 						// 入力された手をint型に変更する
-						int my = my1.nextInt();
+						int my = sca.nextInt();
 						// 自分がグーを出したときに実行される処理
 						if(my == 0) {
 							myT = "「グー」";
@@ -129,7 +129,7 @@ public class Qes1_3 {
 
 						}
 						// お互いの手を出力
-						System.out.println(st + "の手は" + myT);
+						System.out.println(userName + "の手は" + myT);
 						System.out.println("相手の手は" + enemy);
 						// nameが勝ったときのに実行される処理
 						if((my == 0 && cpu == 1)||(my == 1 && cpu == 2)||(my == 2 && cpu == 2)) {
