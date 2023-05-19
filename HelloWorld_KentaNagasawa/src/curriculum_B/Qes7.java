@@ -61,7 +61,7 @@ public class Qes7 extends Qes6 {
 		}
 		// 人数分の試行を実行する
 		for(int n = 1;n <= num ; n ++) {
-			//			一人の全教科の平均点を出す。
+			// 一人の全教科の平均点を出す。
 			System.out.print("\n" + n + "人目の平均点は" + String.format("%.2f", all[n-1]) + "点です。");
 		}
 		// 教科ごとの合計を人数で割り、平均点を出す。

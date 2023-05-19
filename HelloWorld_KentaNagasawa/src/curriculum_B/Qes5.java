@@ -17,9 +17,8 @@ public class Qes5 {
 					System.out.print(String.format("%02d",ne) +
 							         "*" + String.format("%02d",ma) +
 							         "=" + String.format("%03d",ne*ma) + "||");
-				}else {
 					// 変数[ne]が10以上19以下の時
-					if(10 <= ne && ne <= 19) {
+				}else if(10 <= ne && ne <= 19) {
 					// 計算式を出力し、フォーマットを0を埋め込む形式にする
 					System.out.print(String.format("%03d",ne) +
 							         "*" + String.format("%02d",ma) +
@@ -37,4 +36,4 @@ public class Qes5 {
 
 	}
 
-}
+
