@@ -1,8 +1,7 @@
 package curriculum_B;
-
 import java.util.Scanner;
-public class Qes7 extends Qes6 {
 
+public class Qes7{
 	public static void main(String[] args) {
 
 		System.out.println("課題7");

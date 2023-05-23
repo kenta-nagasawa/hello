@@ -15,19 +15,19 @@ public class Qes5 {
 				if( ne <= 9) {
 					// 計算式を出力し、フォーマットを0を埋め込む形式にする
 					System.out.print(String.format("%02d",ne) +
-							         "*" + String.format("%02d",ma) +
-							         "=" + String.format("%03d",ne*ma) + "||");
+							         " * " + String.format("%02d",ma) +
+							         " = " + String.format("%03d",ne*ma) + " || ");
 					// 変数[ne]が10以上19以下の時
 				}else if(10 <= ne && ne <= 19) {
 					// 計算式を出力し、フォーマットを0を埋め込む形式にする
 					System.out.print(String.format("%03d",ne) +
-							         "*" + String.format("%02d",ma) +
-							         "=" + String.format("%03d",ne*ma) + "||");
+							         " * " + String.format("%02d",ma) +
+							         " = " + String.format("%03d",ne*ma) + " || ");
 					}else {
 						// それ以外の時の出力用法
 						System.out.print(String.format("%03d",ne) + 
-								         "*" + String.format("%02d",ma) + 
-								         "=" + String.format("%03d",ne*ma));
+								         " * " + String.format("%02d",ma) + 
+								         " = " + String.format("%03d",ne*ma));
 					
 					}
 				}

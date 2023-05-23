@@ -12,14 +12,14 @@ public class Qes4 {
 			for(int ma = 1 ; ma <= 9 ; ma ++) {
 				// 計算式を出力し、フォーマットを0を埋め込む形式にする
 				if(ma <= 8) {
-				System.out.print(String.format("%02d",ne) +
-                                  "*" + String.format("%02d",ma) + 
-                                  "=" + String.format("%02d",ne * ma) + "||");
+				System.out.print(String.format("%02d", ne) +
+                                  " * " + String.format("%02d", ma) + 
+                                  " = " + String.format("%02d", ne * ma) + " || ");
 				// 条件がfalseの時に実行される処理
 				}else {
 					System.out.print(String.format("%02d",ne) +
-                                     "*" + String.format("%02d",ma) + 
-                                     "=" + String.format("%02d",ne * ma));
+                                     " * " + String.format("%02d", ma ) + 
+                                     " = " + String.format("%02d", ne * ma));
 				}
 					
 				
