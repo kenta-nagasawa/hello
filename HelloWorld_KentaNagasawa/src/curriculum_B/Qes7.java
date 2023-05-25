@@ -32,22 +32,18 @@ public class Qes7{
 			// 英語の点数を小数点表記にする
 			System.out.print(n + t1 + "英語" + t2);
 			// 入力された文字を変数に代入する
-			sca = new Scanner(System.in);
 			double en2 = sca.nextDouble();
 			// 数学の点数を小数点表記にする
 			System.out.print(n + t1 + "数学" + t2);
 			// 入力された文字を変数に代入する
-			sca = new Scanner(System.in);
 			double ma2 = sca.nextDouble();
 			// 理科の点数を小数点表記にする
 			System.out.print(n + t1 + "理科" + t2);
 			// 入力された文字を変数に代入する;
-			sca = new Scanner(System.in);
 			double sy2 = sca.nextDouble();
 			// 社会の点数を小数点表記にする
 			System.out.print(+ n + t1 + "社会" + t2);
 			// 入力された文字を変数に代入する
-			sca = new Scanner(System.in);
 			double so2 = sca.nextDouble();
 			System.out.print("\n");
 			// 一人ずつの強化の点数を合計し、allに格納する
@@ -59,7 +55,7 @@ public class Qes7{
 			soav += so2;
 		}
 		// 人数分の試行を実行する
-		for(int n = 1;n <= num ; n ++) {
+		for(int n = 1; n <= num; n ++) {
 			// 一人の全教科の平均点を出す。
 			System.out.print("\n" + n + "人目の平均点は" + String.format("%.2f", all[n-1]) + "点です。");
 		}
@@ -71,11 +67,11 @@ public class Qes7{
 		// 全教科の全体を合計し、人数×教科数で割り平均点を変数で宣言する
 		double emss = (enav + maav + syav + soav) / (num * 4);
 		// それぞれの平均点をコンソールに出力する
-		System.out.println("\n\n英語の平均点は" + String.format("%.2f",ema) + "点です。" +
-		                    "\n数学の平均点は" + String.format("%.2f",maa) + "点です。" +
-		                    "\n理科の平均点は" + String.format("%.2f",sya) + "点です。" +
-		                    "\n社会の平均点は" + String.format("%.2f",soa) + "点です。" +
-		                    "\n全体の平均点は" + String.format("%.2f",emss) + "点です。");
+		System.out.println("\n\n英語の平均点は" + String.format("%.2f", ema) + "点です。" +
+		                    "\n数学の平均点は" + String.format("%.2f", maa) + "点です。" +
+		                    "\n理科の平均点は" + String.format("%.2f", sya) + "点です。" +
+		                    "\n社会の平均点は" + String.format("%.2f", soa) + "点です。" +
+		                    "\n全体の平均点は" + String.format("%.2f", emss) + "点です。");
 
 	}
 

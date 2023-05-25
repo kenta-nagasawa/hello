@@ -16,15 +16,12 @@ public class Qes4 {
                                   " * " + String.format("%02d", ma) + 
                                   " = " + String.format("%02d", ne * ma) + " || ");
 				// 条件がfalseの時に実行される処理
-				}else {
+				} else {
 					System.out.print(String.format("%02d",ne) +
                                      " * " + String.format("%02d", ma ) + 
                                      " = " + String.format("%02d", ne * ma));
 				}
-					
-				
 			}
 		}
 	}
-
 }
