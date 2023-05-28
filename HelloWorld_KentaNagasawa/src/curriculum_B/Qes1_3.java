@@ -57,25 +57,28 @@ public class Qes1_3 {
 			}
 		}
 
-
-
 		System.out.println("\n課題3");
 		
 		do {
 			System.out.print("ユーザー名 > ");
 			userName = sca.nextLine();
 			num = userName.length();
-			// 条件式がnum >= 11がtrueの時に実行される処理
+			
+			// 入力が11文字以上の時
 			if(num >= 11) {
 				System.out.println("「名前を10文字以内にしてください」\n");
 
-				// 条件式num == 0がtrueの時に実行される処理	
+			// 入力がないとき	
 			} else if(num <= 0 ||Objects.isNull(userName)) {
 				System.out.println("「名前を入力してください」\n");
+				
+			// 入力があり、10文字以内の時
 			} else if(num >= 1 && num <= 10) {
+				// 入力が英数字のみの時と、そうでないときで出力を変化させる
 				String result = userName.matches(alpha) == false ? "「半角英数字のみで名前を入力してください」\n" : "ユーザー名「"+ userName +"」を登録しました"; 
 				System.out.println(result);
 			} 
+		// 未入力、11文字以上、英数字入力でないときもう一度行う	
 		} while(userName.matches(alpha) == false || num >= 11 || num == 0);
 		
 		num = 0;
@@ -83,7 +86,7 @@ public class Qes1_3 {
 		int cpu = 0;
 
 		// じゃんけんで自分が勝つまで実行される処理
-		// 自分の手と相手の手を宣言する
+		// 自分の手と相手の手ををそれぞれ格納する
 		String[] myT = new String[3];
 		myT[0] = "グー";
 		myT[1] = "チョキ";
@@ -97,6 +100,7 @@ public class Qes1_3 {
 		do {
 			System.out.println("\nじゃんけん：0はグー、1：チョキ、2：パー");
 			System.out.print("入力してください > ");
+			
 			// 自分の手
 			my = sca.nextInt();
 			// 相手の手
@@ -121,6 +125,7 @@ public class Qes1_3 {
 				// あいこの場合
 			} else if(my == cpu) {
 				System.out.println("\nDRAW あいこ もう一回しましょう！");
+				
 			} else if(my >= 3 || my <= -1 || Objects.isNull(my)) {
 				System.out.print("\n入力しなおしてください＞");
 			}
