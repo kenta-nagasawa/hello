@@ -6,16 +6,15 @@ import java.util.Scanner;
 
 public class Qes1_3 {
 	public static void main(String[] args) {
-
-
+		
 		System.out.println("課題1");
-		// st＝ログインユーザー名
-		Scanner sca;
+		// userName＝ログインユーザー名
+		Scanner sca = null;
 		sca = new Scanner(System.in); 
 		System.out.print("\nユーザー名 > ");
 		// 入力された文字を取得する
-		String userName = null;
-		userName = sca.next();
+		String userName ="";
+		userName = sca.nextLine();
 		System.out.println(userName);
 
 		// 入力された文字数を確認する
@@ -24,9 +23,9 @@ public class Qes1_3 {
 
 		// 条件式を作る
 		// 条件式num == 0がtrueの時に実行される処理
-		if (num == 0||Objects.isNull(userName)) {
+		if(num == 0||userName.isEmpty()) {
 			System.out.println("「名前を入力してください」");
-		} else if (num >= 11) {
+		} else if(num >= 11) {
 			// 条件式がnum >= 11がtrueの時に実行される処理
 			System.out.println("「名前を10文字以内にしてください」");
 		} else {
@@ -36,20 +35,21 @@ public class Qes1_3 {
 		System.out.println("\n課題2");
 		// 半角英数字のみ
 		String alpha ="^[0-9a-zA-Z]+$";
-
-		if (num <= 0 || Objects.isNull(userName)) {
+		
+		// 未入力の場合
+		if(num <= 0 ||"".equals(userName)) {
 			System.out.println("「名前を入力してください」");
 
 			// 上記の条件式に当てはまらないときに実行される処理
 			// 半角英数字でない場合に実行される処理
-		} else if (userName.matches(alpha) == false) {
+		} else if(userName.matches(alpha) == false) {
 			System.out.println("「半角英数字のみで名前を入力してください」");
 
 			// 半角英数字の場合の時に実行される処理	
-		} else if (userName.matches(alpha) == true) {
+		} else if(userName.matches(alpha) == true) {
 
 			// 条件式がnum >= 11がtrueの時に実行される処理
-			if (num >= 11 ) {
+			if(num >= 11 ) {
 				System.out.println("「名前を10文字以内にしてください」");
 
 			} else {
@@ -60,37 +60,39 @@ public class Qes1_3 {
 
 
 		System.out.println("\n課題3");
-
+		
 		do {
-			System.out.print("\nユーザー名 > ");
-			userName = sca.next();
+			System.out.print("ユーザー名 > ");
+			userName = sca.nextLine();
 			num = userName.length();
-			if(userName.matches(alpha) == false){
-				System.out.println("「半角英数字のみで名前を入力してください」");
-			}
-
 			// 条件式がnum >= 11がtrueの時に実行される処理
 			if(num >= 11) {
-				System.out.println("「名前を10文字以内にしてください」");
+				System.out.println("「名前を10文字以内にしてください」\n");
 
 				// 条件式num == 0がtrueの時に実行される処理	
-			} else if(num <= 0 || Objects.isNull(userName)) {
-				System.out.println("「名前を入力してください」");
-			}
+			} else if(num <= 0 ||Objects.isNull(userName)) {
+				System.out.println("「名前を入力してください」\n");
+			} else if(num >= 1 && num <= 10) {
+				String result = userName.matches(alpha) == false ? "「半角英数字のみで名前を入力してください」\n" : "ユーザー名「"+ userName +"」を登録しました"; 
+				System.out.println(result);
+			} 
 		} while(userName.matches(alpha) == false || num >= 11 || num == 0);
-		System.out.println("ユーザー名「"+ userName +"」を登録しました");
+		
+		num = 0;
+		int my = 0;
+		int cpu = 0;
 
 		// じゃんけんで自分が勝つまで実行される処理
 		// 自分の手と相手の手を宣言する
-		String myT = "";
-		String enemy = "";
-
-		// 相手の手
-		int cpu = 0;
+		String[] myT = new String[3];
+		myT[0] = "グー";
+		myT[1] = "チョキ";
+		myT[2] = "パー";
+		String[] enemy = new String[3];
+		enemy[0] = "グー";
+		enemy[1] = "チョキ";
+		enemy[2] = "パー";
 		Random rand = new Random();		
-
-		int i = 0;
-		int my = 0;
 		
 		do {
 			System.out.println("\nじゃんけん：0はグー、1：チョキ、2：パー");
@@ -100,39 +102,9 @@ public class Qes1_3 {
 			// 相手の手
 			cpu = rand.nextInt(3);
 			
-			switch(my) {
-			// 自分がグーを出したときに実行される処理
-			case 0:
-				myT = "「グー」";
-				break;
-			// 自分ががチョキを出したときに実行される処理
-			case 1:
-				myT = "「チョキ」";
-				break;
-			// 自分がパーを出したときに実行される処理
-			case 2:
-				myT = "「パー」";
-				break;
-			}
-			
-			switch(cpu) {
-			// 相手がグーを出したときに実行される処理
-			case 0:
-				enemy = "「グー」";
-				break;
-			// 相手がチョキを出したときに実行される処理
-			case 1:
-				enemy = "「チョキ」";
-				break;
-			// 相手がパーを出したときに実行される処理
-			case 2:
-				enemy = "「パー」";
-				break;
-			}
-
 			// お互いの手を出力
-			System.out.println(userName + "の手は" + myT);
-			System.out.println("相手の手は" + enemy);
+			System.out.println(userName + "の手は" + myT[my]);
+			System.out.println("相手の手は" + enemy[cpu]);
 
 			// 自分がグーで負けた場合
 			if(my == 1 && cpu == 0) {
@@ -152,11 +124,11 @@ public class Qes1_3 {
 			} else if(my >= 3 || my <= -1 || Objects.isNull(my)) {
 				System.out.print("\n入力しなおしてください＞");
 			}
-			i ++;
+			num++;
 
 			// 自分が勝ったときのに実行される処理
 		} while(my >= 3 || my <= -1 || my == 1 && cpu == 0 || my == 2 && cpu == 1 || my == 0 && cpu == 2 || my == cpu );
-		System.out.println("\nやるやん。 \n次は俺にリベンジさせて \n\n勝つまでにかかった合計回数は"+ i + "回です");
+		System.out.println("\nやるやん。 \n次は俺にリベンジさせて \n\n勝つまでにかかった合計回数は"+ num + "回です");
 	}
 }
 

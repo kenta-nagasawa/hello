@@ -25,7 +25,7 @@ public class Qes7{
 
 
 		// for文を用いて、入力され人数分試行回数を適用する
-		for(int n = 1; n <= num;n ++) {
+		for(int n = 1; n <= num; n++) {
 			// 変数を宣言する
 			String t1 ="人目の『";
 			String t2 ="』の点数を入力してください ：";
@@ -55,7 +55,7 @@ public class Qes7{
 			soav += so2;
 		}
 		// 人数分の試行を実行する
-		for(int n = 1; n <= num; n ++) {
+		for(int n = 1; n <= num; n++) {
 			// 一人の全教科の平均点を出す。
 			System.out.print("\n" + n + "人目の平均点は" + String.format("%.2f", all[n-1]) + "点です。");
 		}
