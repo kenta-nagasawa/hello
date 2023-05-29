@@ -9,18 +9,19 @@ public class Qes1_3 {
 		
 		System.out.println("課題1");
 		// userName＝ログインユーザー名
-		Scanner sca = null;
+		Scanner sca;
+		String userName = "";
+		int num = 0;
 		sca = new Scanner(System.in); 
 		System.out.print("\nユーザー名 > ");
+		// nullチェックを行う
 		// 入力された文字を取得する
-		String userName ="";
 		userName = sca.nextLine();
-		System.out.println(userName);
-
+		if(Objects.nonNull(sca)) {
+			System.out.print("null");
+		} 
 		// 入力された文字数を確認する
-		int num = 0;
 		num = userName.length();
-
 		// 条件式を作る
 		// 条件式num == 0がtrueの時に実行される処理
 		if(num == 0||userName.isEmpty()) {
@@ -46,7 +47,7 @@ public class Qes1_3 {
 			System.out.println("「半角英数字のみで名前を入力してください」");
 
 			// 半角英数字の場合の時に実行される処理	
-		} else if(userName.matches(alpha) == true) {
+		} else {
 
 			// 条件式がnum >= 11がtrueの時に実行される処理
 			if(num >= 11 ) {
@@ -56,12 +57,19 @@ public class Qes1_3 {
 				System.out.println("ユーザー名「" + userName + "」を登録しました");
 			}
 		}
+		
 
 		System.out.println("\n課題3");
 		
 		do {
 			System.out.print("ユーザー名 > ");
+			
+			// 入力された文字を取得する
 			userName = sca.nextLine();
+			// nullチェックを行う
+			if(Objects.nonNull(sca)) {
+				System.out.print("null");
+			}
 			num = userName.length();
 			
 			// 入力が11文字以上の時
@@ -73,7 +81,7 @@ public class Qes1_3 {
 				System.out.println("「名前を入力してください」\n");
 				
 			// 入力があり、10文字以内の時
-			} else if(num >= 1 && num <= 10) {
+			} else {
 				// 入力が英数字のみの時と、そうでないときで出力を変化させる
 				String result = userName.matches(alpha) == false ? "「半角英数字のみで名前を入力してください」\n" : "ユーザー名「"+ userName +"」を登録しました"; 
 				System.out.println(result);
@@ -87,14 +95,9 @@ public class Qes1_3 {
 
 		// じゃんけんで自分が勝つまで実行される処理
 		// 自分の手と相手の手ををそれぞれ格納する
-		String[] myT = new String[3];
-		myT[0] = "グー";
-		myT[1] = "チョキ";
-		myT[2] = "パー";
-		String[] enemy = new String[3];
-		enemy[0] = "グー";
-		enemy[1] = "チョキ";
-		enemy[2] = "パー";
+		String[] myT = {"グー","チョキ", "パー"};
+		String[] enemy = {"グー","チョキ", "パー"};
+		// 相手の手をランダムにする
 		Random rand = new Random();		
 		
 		do {
@@ -102,7 +105,11 @@ public class Qes1_3 {
 			System.out.print("入力してください > ");
 			
 			// 自分の手
+			// 入力された文字を取得する
 			my = sca.nextInt();
+			if(Objects.nonNull(sca)) {
+				System.out.print("null");
+			} 
 			// 相手の手
 			cpu = rand.nextInt(3);
 			
@@ -126,7 +133,7 @@ public class Qes1_3 {
 			} else if(my == cpu) {
 				System.out.println("\nDRAW あいこ もう一回しましょう！");
 				
-			} else if(my >= 3 || my <= -1 || Objects.isNull(my)) {
+			} else if(my >= 3 || my <= -1) {
 				System.out.print("\n入力しなおしてください＞");
 			}
 			num++;

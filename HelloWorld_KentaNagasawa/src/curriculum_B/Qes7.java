@@ -42,10 +42,9 @@ public class Qes7{
 			// 入力された文字を変数に代入する;
 			double sy2 = sca.nextDouble();
 			// 社会の点数を小数点表記にする
-			System.out.print(+ n + t1 + "社会" + t2);
+			System.out.print(n + t1 + "社会" + t2 + "\n");
 			// 入力された文字を変数に代入する
 			double so2 = sca.nextDouble();
-			System.out.print("\n");
 			// 一人ずつの強化の点数を合計し、allに格納する
 			all[n-1] = (en2 + ma2 + sy2 + so2) / 4;
 			// 英語、数学、理科、社会の一人ずつ教科の点数をそれぞれの教科に足して合計する
