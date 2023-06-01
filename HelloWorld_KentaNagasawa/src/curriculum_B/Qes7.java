@@ -9,9 +9,18 @@ public class Qes7{
 		// 生徒の人数を入力してください(2人以上):と出力する
 		System.out.print("生徒の人数を入力してください(2人以上) ：");
 		// 入力された値を読み込む
-		Scanner sca = new Scanner(System.in);
-		// nuのを変数として宣言する
-		int num = sca.nextInt();
+		Scanner sca;
+		// 数を宣言する
+		int num = 0;
+		
+		do {
+			sca = new Scanner(System.in);
+			num = sca.nextInt();
+			if(num <= 1) {
+				System.out.print("生徒の人数を入力してください(2人以上) ：");
+			}
+		} while(num <= 1);
+		
 		// 一人あたりの合計を格納する配列を宣言する
 		double[] all = new double[num];
 		// 全員の英語の合計を代入する
@@ -22,6 +31,7 @@ public class Qes7{
 		double syav = 0.0d;
 		// 全員の社会の合計を代入する
 		double soav = 0.0d;
+				
 
 
 		// for文を用いて、入力され人数分試行回数を適用する
@@ -42,9 +52,12 @@ public class Qes7{
 			// 入力された文字を変数に代入する;
 			double sy2 = sca.nextDouble();
 			// 社会の点数を小数点表記にする
-			System.out.print(n + t1 + "社会" + t2 + "\n");
+			System.out.print(n + t1 + "社会" + t2);
 			// 入力された文字を変数に代入する
 			double so2 = sca.nextDouble();
+			
+			System.out.print("\n");
+			
 			// 一人ずつの強化の点数を合計し、allに格納する
 			all[n-1] = (en2 + ma2 + sy2 + so2) / 4;
 			// 英語、数学、理科、社会の一人ずつ教科の点数をそれぞれの教科に足して合計する
@@ -55,6 +68,7 @@ public class Qes7{
 		}
 		// 人数分の試行を実行する
 		for(int n = 1; n <= num; n++) {
+			
 			// 一人の全教科の平均点を出す。
 			System.out.print("\n" + n + "人目の平均点は" + String.format("%.2f", all[n-1]) + "点です。");
 		}
@@ -63,8 +77,10 @@ public class Qes7{
 		double maa = maav / num;
 		double sya = syav / num;
 		double soa = soav / num;
+		
 		// 全教科の全体を合計し、人数×教科数で割り平均点を変数で宣言する
 		double emss = (enav + maav + syav + soav) / (num * 4);
+		
 		// それぞれの平均点をコンソールに出力する
 		System.out.println("\n\n英語の平均点は" + String.format("%.2f", ema) + "点です。" +
 		                    "\n数学の平均点は" + String.format("%.2f", maa) + "点です。" +
