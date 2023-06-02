@@ -7,7 +7,7 @@ public class Curriculum_New_1_18{
 	// 文字列型と整数型のメソッドを作成する。
 	public static void nure(String st , int num) {
 		
-		//		コンソールに出力する。
+		// コンソールに出力する。
 		System.out.println(st + " " + num);
 	}
 
@@ -81,7 +81,7 @@ public class Curriculum_New_1_18{
         // 拡張for文を使い、[all]に格納された値をひとつずつ[all1]に代入する、
 	    for(double all1 : all) {
 	    	
-	    	// double型[subAll]に[all1]の値を足してい。
+	    	// double型[subAll]に[all1]の値を足していく。
 	        subAll += all1;
 	    }
 	    
