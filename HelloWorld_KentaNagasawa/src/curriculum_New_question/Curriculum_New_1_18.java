@@ -53,7 +53,7 @@ public class Curriculum_New_1_18{
 		for(int num = 1; num <= rand; num++) {
 			
 			// 1～100をランダムに[all]に格納する。
-			all[num - 1] =Integer.valueOf(new Random().nextInt(100) + 1);
+			all[num - 1] =new Random().nextInt(100) + 1;
 			
 			// [all]に格納された値を一つずつ出力する。
 			System.out.println(all[num - 1]);
