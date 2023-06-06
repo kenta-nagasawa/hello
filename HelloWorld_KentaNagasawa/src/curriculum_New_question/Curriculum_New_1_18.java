@@ -18,7 +18,7 @@ public class Curriculum_New_1_18{
 	}
 	
 	// Q3：引数として整数の配列を渡すと、受け取った値を順番にコンソールに出力するメソッドを作成してください。
-	// 整数メソッド[hai]を作成するし、引数を配列にする。
+	// 整数メソッド[hairetsu]を作成するし、引数を配列にする。
 	public static void hairetsu(int[] date) {
 		
         // [date]の値を一つずつ[date1]に代入する。
@@ -30,7 +30,7 @@ public class Curriculum_New_1_18{
 	}
 	
 	// Q4：Q2をオーバーロードして引数を小数2つに変更し、引数同士を和算しコンソールに出力してください。
-	// メソッド[jou]をオーバーロードして、引数を小数型にする。
+	// メソッド[jouNum]をオーバーロードして、引数を小数型にする。
 	public static void jouNum(float jou1 , float jou2) {
 		
 		// 引数同士を和算する
@@ -43,7 +43,7 @@ public class Curriculum_New_1_18{
 	// Q5：引数に整数を渡すと、1～100までのランダムな数字を引数の回数分格納して
 	// 格納した値を順番にコンソールで出力後、格納した値を返すメソッドを作成してください。
 	// ※0は出力＆格納しないようにしてください。
-    // 配列メソッド[ran]を作成する。
+    // 配列メソッド[Rand]を作成する。
 	public static int[] Rand(int rand) {
 		
 		// 配列[all]を宣言し、[rand]の数だけ格納する。
@@ -65,13 +65,13 @@ public class Curriculum_New_1_18{
 
 	// Q6：引数にQ5で作成したメソッドの返り値を受け取り、受け取った配列の要素の平均値をコンソールに出力するメソッドを作成してください。
 	// ※小数点以下も表示されるようにしてください。
-	// double型メソッド[ave]を作成する。
+	// double型メソッド[averageNum]を作成する。
 	public static double averageNum(int aveg) {
 		
 		// 配列[all]を宣言する。
 	    int all[];
 	    
-	    // メソッド[ran]を呼び出し、返り値を配列[all]に与える。
+	    // メソッド[Rand]を呼び出し、返り値を配列[all]に与える。
 	    all = Rand(aveg);
 	    
 	    // double型[subAll]を宣言し、初期値を設定する。
@@ -102,7 +102,7 @@ public class Curriculum_New_1_18{
 		// double型[aveAll]を宣言する。
 		double aveAll;
 		
-		// メソッド[ave]を呼び出し、返り値を[avaAll]に代入する。
+		// メソッド[averageNum]を呼び出し、返り値を[avaAll]に代入する。
 		aveAll = averageNum(judgeNum);
 		
 		// 返り値が50以上だったらtureを出力する処理をする。
@@ -114,12 +114,12 @@ public class Curriculum_New_1_18{
 		
 		System.out.println("Q1");
 		
-		// 整数型と文字列型のメソッド[nure]を呼び出し、文字列型[st]に「Hello JavaSE」整数型[num]に「11」を入れる。
+		// 整数型と文字列型のメソッド[Hello]を呼び出し、文字列型[st]に「Hello JavaSE」整数型[num]に「11」を入れる。
 		Hello("Hello JavaSE" , 11);
 
 		System.out.println("\nQ2");
 		
-		// 乗算メソッド[jou]を呼び出し、[Jou1,jou2]の値を7，3に入力する。
+		// 乗算メソッド[jouNum]を呼び出し、[Jou1,jou2]の値を7，3に入力する。
 		jouNum(7 , 3);
 
 		System.out.println("\nQ3");
@@ -127,22 +127,22 @@ public class Curriculum_New_1_18{
 		// 配列を指定する
 		int[] subDate = {12 , 34 , 56 , 78 , 90};
 		
-		// 配列メソッド[hai]を呼び出し、配列を入力する。
+		// 配列メソッド[hairetsu]を呼び出し、配列を入力する。
 		hairetsu(subDate);
 		
 		System.out.println("\nQ4");
 		
-		// [jou]メソッドに引数を入れる。
+		// [jouNum]メソッドに引数を入れる。
 		jouNum(12.34f , 56.78f);
 		
 		System.out.println("\nQ5");
 		
-		// メソッド[ran]を呼び出し、[rand]に配列に格納する回数の引数として入れる。
+		// メソッド[Rand]を呼び出し、[rand]に配列に格納する回数の引数として入れる。
 		Rand(10);
 	
 		System.out.println("\nQ6");
 		
-		// メソッド[ave]を呼び出し、[aveg]に配列に格納する回数の引数として入れる。
+		// メソッド[averageNum]を呼び出し、[aveg]に配列に格納する回数の引数として入れる。
 		averageNum(10);
 		
 		System.out.println("\nQ7");
