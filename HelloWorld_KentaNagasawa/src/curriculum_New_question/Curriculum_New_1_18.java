@@ -97,15 +97,15 @@ public class Curriculum_New_1_18{
 	
 	// Q7：引数にQ6で作成したメソッドの返り値を受け取り、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力してください。
 	// メソッド[judge]を作成し、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力する処理をする。
-	public static void judge(int jud) {
+	public static void judge(int judgeNum) {
 		
 		// double型[aveAll]を宣言する。
 		double aveAll;
 		
 		// メソッド[ave]を呼び出し、返り値を[avaAll]に代入する。
-		aveAll = averageNum(jud);
+		aveAll = averageNum(judgeNum);
 		
-		// 返り値が50以上だったら出力する処理をする。
+		// 返り値が50以上だったらtureを出力する処理をする。
 		System.out.println(aveAll >= 50);
 	}
 
