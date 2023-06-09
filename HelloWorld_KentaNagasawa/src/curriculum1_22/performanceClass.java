@@ -16,18 +16,30 @@
   */
 package curriculum1_22;
 
+import java.time.LocalDateTime;
+
 public class performanceClass {
 
 	public static void main(String[] args) {
-		// クラス[processClass]を変数textに代入する
-		processClass text = new processClass();
+		// 時刻を取得する
+		LocalDateTime now = LocalDateTime.now();
 		
-		/*コンソールに
-		  こんにちは！ここは日本です！
-		  この寿司はうまい
-		  寿司は和食です
-		  今の現在日時はyyyy/MM/dd HH:mm:ssです
-		  と出力する*/
-		System.out.println(text.text1 + text.now +text.text2);
+		// processClassを呼び出す
+		processClass process = new processClass();
+		
+		// ロケーションを追加する
+		process.setLocation("日本");
+		
+		// 食べ物を追加する
+		process.setFood("寿司");
+		
+		// 料理の種類を追加する
+		process.setFoodType("日本食");
+		
+		// 時刻を追加する
+		process.setDate(now);
+		
+		// コンソールに出力する
+		process.print();
 	}
 }
