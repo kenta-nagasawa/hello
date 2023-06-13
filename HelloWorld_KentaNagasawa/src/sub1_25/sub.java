@@ -32,9 +32,6 @@ import curriculum1_25.status;
 
 public class sub extends status{
 	sub(){
-		// [sts]変数を宣言し、[status]クラスを呼び出す
-		status sts = new status();
-
 		// プレイヤー名とコンソールに出力する
 		System.out.print("プレイヤー名＞");
 
@@ -54,7 +51,7 @@ public class sub extends status{
 		} else {
 
 			// [setUser]に"こんにちは「" + name + "」さん"を代入する
-			sts.setUser("こんにちは「" + name + "」さん");
+			super.setUser("こんにちは「" + name + "」さん");
 
 			// [statusNum]配列を作る
 			int[] statusNum = new int[5];
@@ -73,25 +70,24 @@ public class sub extends status{
 			}
 
 			// 格納された値をそれぞれの変数に代入する
-			sts.setHP(statusNum[0]);
-			sts.setMP(statusNum[1]);
-			sts.setAttack(statusNum[2]);
-			sts.setSpeed(statusNum[3]);
-			sts.setDefense(statusNum[4]);
-
+			super.setHP(statusNum[0]);
+			super.setMP(statusNum[1]);
+			super.setAttack(statusNum[2]);
+			super.setSpeed(statusNum[3]);
+			super.setDefense(statusNum[4]);
+			
 			// コンソールに出力する
-			System.out.println(sts.getUser() + "\nステータス" + 
-					"\nHP：" + sts.getHP() + 
-					"\nMP：" + sts.getMP() +
-					"\n攻撃力：" + sts.getAttack() + 
-					"\n素早さ：" + sts.getSpeed() + 
-					"\n防御力：" + sts.getDefense() +
+			System.out.println(super.getUser() + "\nステータス" + 
+					"\nHP：" + super.getHP() + 
+					"\nMP：" + super.getMP() +
+					"\n攻撃力：" + super.getAttack() + 
+					"\n素早さ：" + super.getSpeed() + 
+					"\n防御力：" + super.getDefense() +
 					"\n\nさあ冒険に出かけよう！" );
 		}
 	}
 	
 	public static void main(String[] args) {
-		status sts = new status();
 		sub sub = new sub();
 	}
 }
