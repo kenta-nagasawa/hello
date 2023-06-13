@@ -51,6 +51,7 @@ public class country extends info{
 		
 		// 入力内容を文字列にし、","で一区切りとする
 		String num = sca.nextLine();
+		sca.close();
 		String[] countryNum = num.split(",");
 		
 		// 入力された数字を1～10の順に並ぶようにする
@@ -73,7 +74,7 @@ public class country extends info{
 			// 入力された文字列をひとつづつ処理する
 			for(String text: countryNum) {
 				
-				// 値が整数でない場合,0～2ではない場合
+				// 値が整数でない場合
 				if(!text.matches("-?\\d+")) {
 					
 					// -1を格納する
