@@ -37,6 +37,7 @@
 
 package Q1_29;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -51,17 +52,16 @@ public class country extends info{
 		
 		// 入力内容を文字列にし、","で一区切りとする
 		String num = sca.nextLine();
-		sca.close();
 		String[] countryNum = num.split(",");
 		
+		// 入力された回数
+		int times = 0;
+		
 		// 入力された数字を1～10の順に並ぶようにする
-		int[] countryLen = new int[countryNum.length];
+		Integer[] countryLen = new Integer[countryNum.length];
 		
 		// 正しく入力された数
 		int trueNum = 0;
-		
-		// 入力された数
-		int times = 0;
 		
 		// 入力がなかった場合
 		if(Objects.isNull(num) || num.isEmpty()) {
@@ -84,7 +84,7 @@ public class country extends info{
 				} else {
 					
 					// 文字列型から整数型に変換する
-					int coNum = Integer.parseInt(text);
+					Integer coNum = Integer.parseInt(text);
 					
 					// 0～10が入力された場合、配列に数字を格納する
 					if(coNum <= 10 && coNum >= 0 ) {
@@ -106,15 +106,42 @@ public class country extends info{
 			// 入力ミス回数のを出力する
 			System.out.println("入力miss" + (times - trueNum) + "回\n");
 			
-			// 配列をソートし、並び順を調整する。
-			Arrays.sort(countryLen);
+			System.out.print("昇順or降順：");
+			String sortText = sca.next();
+			sca.close();
 			
-			// 正しく入力された配列のみ出力する
-			for(int numSort = 0 + countryNum.length - trueNum; numSort <= countryNum.length - 1; numSort++) {
-				System.out.print(countryLen[numSort]);
+			// 入力がなかった場合
+			if(Objects.isNull(num) || num.isEmpty()) {
+				System.out.println("NULL");
+				return;
 				
-			    // スーパークラスのkindsメソッドを呼び出す。
-			    super.kinds(countryLen[numSort]);
+			// 入力があった場合、昇順の場合
+			} else if(sortText.equals("昇順")) {
+				// 配列をソートし、並び順を調整する。
+				Arrays.sort(countryLen);
+				
+				// 正しく入力された配列のみ出力する
+				for(int numSort = times - trueNum; numSort <= times - 1; numSort++) {
+					System.out.print(countryLen[numSort]);
+					
+					// スーパークラスのkindsメソッドを呼び出す。
+				    super.kinds(countryLen[numSort]);
+				}
+			
+			// 降順の場合
+			} else if(sortText.equals("降順")) {
+				// 配列をソートし、並び順を調整する。
+				Arrays.sort(countryLen, Collections.reverseOrder());
+				
+				// 正しく入力された配列のみ出力する
+				for(int numSort = 0; numSort <= trueNum - 1; numSort++) {
+					
+					// スーパークラスのkindsメソッドを呼び出す。
+				    super.kinds(countryLen[numSort]);
+				}
+				
+			} else {
+				System.out.println("ERROR");
 			}
 		}
 	}
