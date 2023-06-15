@@ -40,20 +40,6 @@ public class Person {
 		System.out.println("BMIは" + bmiPerson + "です");
 	}
 	
-	// 車のメソッドを作成する
-	public void buy(Car car) {
-		// 車の所有者の名前を登録する
-		car.setOwner(this.name);
-		System.out.println(car.getOwner() + "が購入しました");
-	}
-	
-	// バイクのメソッドを作成する
-	public void buy(Bicycle bicycle) {
-		// バイクの所有者の名前を登録する
-		bicycle.setOwner(this.name);
-		System.out.println(bicycle.getOwner() + "が購入しました");
-	}
-	
 	// 人数を出力する
 	public static void printCount() {
 		System.out.println("\n合計" + Person.number + "人です");

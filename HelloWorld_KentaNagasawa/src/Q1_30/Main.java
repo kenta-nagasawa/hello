@@ -14,31 +14,5 @@ public class Main {
 		
 		// 人数を出力する
 		Person.printCount();
-		
-		// 車のクラスを呼び出す
-		Car car = new Car();
-		
-		// バイクのクラスを呼び出す
-		Bicycle bicycle = new Bicycle();
-		System.out.print("\n");
-		
-		// 一人目を車の所有者として名前を登録する
-		car.setOwner(person1.name);
-		
-		// 二人目をバイクの所有者として名前を登録する
-		bicycle.setOwner(person2.name);
-		
-		// 車の所有者を出力する
-		System.out.println(car.getOwner());
-		
-		// バイクの所有者を出力する
-		System.out.println(bicycle.getOwner());
-		System.out.print("\n");
-		
-		// 車の購入者を出力する
-		person1.buy(car);
-		
-		// バイクの購入者を出力する
-		person2.buy(bicycle);
 	}
 }
