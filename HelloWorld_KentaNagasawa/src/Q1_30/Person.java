@@ -30,14 +30,14 @@ public class Person {
 	// printメソッドを作成する
 	public void print() {
 
-		// BMIを呼び出し、小数点1桁までにする
-		String bmiPerson = String.format("%.1f",this.bmi());
+		// BMIを呼び出し、小数点を切り捨てる
+		double bmiPerson = Math.floor(this.bmi());
 
 		//コンソールに出力する
 		System.out.print("\n");
 		System.out.println("名前は" + this.name + "です");
-		System.out.println("年は" + this.age + "歳です");
 		System.out.println("BMIは" + bmiPerson + "です");
+		System.out.println("年は" + this.age + "歳です");
 	}
 	
 	// 人数を出力する
